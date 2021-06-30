@@ -1,0 +1,37 @@
+﻿<Window x:Class="Convertor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Convertor"
+        mc:Ignorable="d"
+        Title="Конвертер едениц площади" Height="300" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="365*"/>
+            <ColumnDefinition Width="127*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Конвертер" HorizontalAlignment="Left" Height="225" Margin="25,25,0,0" VerticalAlignment="Top" Width="450" Grid.ColumnSpan="2">
+            <Canvas HorizontalAlignment="Left" Height="180" Margin="10,10,0,0" VerticalAlignment="Top" Width="410">
+                <Button Content="Вычислить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Canvas.Left="40" Canvas.Top="150" Click="btnClickСalculate"/>
+                <TextBox x:Name="Resul" Height="20" Canvas.Left="200" TextWrapping="Wrap" Canvas.Top="150" Width="140" IsReadOnlyCaretVisible="True"/>
+                <TextBlock Canvas.Left="130" TextWrapping="Wrap" Canvas.Top="152"><Run Text="Результат"/><Run Text=":"/></TextBlock>
+                <Canvas x:Name="canvasCheck" Height="108" Canvas.Top="35" Width="364">
+                    <TextBox x:Name="userdata" Height="20" Canvas.Left="40" TextWrapping="Wrap" Canvas.Top="6" Width="99"/>
+                    <ComboBox x:Name="Box_1" Height="22" VerticalAlignment="Top" Canvas.Left="200" Canvas.Top="7" SelectedIndex="0" RenderTransformOrigin="0.889,0.409" Width="160">
+                        <ComboBoxItem Content="Квадратный километр"/>
+                        <ComboBoxItem Content="Квадратный метр"/>
+                        <ComboBoxItem Content="Квадратный сантиметр"/>
+                        <ComboBoxItem Content="Квадратный миллиметр"/>
+                    </ComboBox>
+                    <ComboBox x:Name="Box_2" Height="22" VerticalAlignment="Top" Canvas.Left="200" Canvas.Top="52" SelectedIndex="0" Width="160">
+                        <ComboBoxItem Content="Квадратный километр"/>
+                        <ComboBoxItem Content="Квадратный метр"/>
+                        <ComboBoxItem Content="Квадратный сантиметр"/>
+                        <ComboBoxItem Content="Квадратный миллиметр"/>
+                    </ComboBox>
+                </Canvas>
+            </Canvas>
+        </GroupBox>
+    </Grid>
+</Window>
